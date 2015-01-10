@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>蚂蚁文转换小工具</title>
+</head>
+<body>
+<h1>My first page!</h1>
+<input type="text" style="height:100px;width:400px;font-size:24px;text-align:center" id="in"/><br />
+<input type="button" value="转换" id="convert" /> <br />
+<input type="text" style="height:100px;width:400px;font-size:24px;text-align:center" id="out" />
+<script type="text/javascript">
+var input = document.getElementById('in');
+document.getElementById('convert').onclick=function(){maYiWen(input.value)};
+function maYiWen(inStr){
+        var code = String.fromCharCode(1161);
+		var outStr = '';
+		for(var i=0,l=inStr.length;i<l;i++){
+		         outStr += inStr.charAt(i) + code;
+		}
+        var output = document.getElementById('out');
+		output.value  = outStr;
+}
+
+</script>
+</body>
+
+</html>
